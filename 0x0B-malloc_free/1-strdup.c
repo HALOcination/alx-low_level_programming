@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -19,11 +20,10 @@ char *_strdup(char *str)
 		;
 
 	/*+1 on the size puts the end of string character*/
-	| m = malloc(size * sizeof(*str) + 1);
+	m = malloc(size * sizeof(*str) + 1);
 
 	if (m == 0)
 		return (NULL);
-	else
 	{
 		for (; i < size; i++)
 			m[i] = str[i];
