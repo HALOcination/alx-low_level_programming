@@ -1,14 +1,14 @@
 #include "variadic_functions.h"
 
 /**
- * print_numbers - prints numbers and separators
- * @separator: string separator
- * @n: number of arg
- * @...: string to print
+ * print_strings - prints strings and separators
+ * @separator: separator between strings
+ * @n: number of arguments
  *
  * return: void
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	int i = n;
 	char *str;
