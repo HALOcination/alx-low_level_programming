@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-* sum_dlistint - Sums all the data of a dlistint_t list
+* sum_dlistint - Sums all data of a dlistint_t list
 * @head: head
 *
 * BY: HALO
