@@ -39,7 +39,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 						new_nod->n = n;
 						new_nod->next = head->next;
 						new_nod->prev = head;
-						head->next->prev = new_n;
+						head->next->prev = new_nod;
 						head->next = new_nod;
 					}
 				}
