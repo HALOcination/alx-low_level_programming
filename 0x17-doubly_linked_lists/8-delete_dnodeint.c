@@ -4,6 +4,7 @@
  * delete_dnodeint_at_index - Deletes a node from a dlistint_t
  * @head: head
  * @index: index
+ *
  * BY: HALO
  * Return: 1 if success, -1 if fail
  */
