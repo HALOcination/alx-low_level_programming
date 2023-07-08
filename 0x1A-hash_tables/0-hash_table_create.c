@@ -9,27 +9,20 @@
  * Return: a hash table (NULL if error)
  */
 hash_table_t *hash_table_create(unsigned long int size)
-	{
-	table_t *ht;
-	node_t **array;
-	ulint a;
+{
+	hash_table_t *ht;
+	unsigned long int i;
 
-	ht = malloc(sizeof(table_t));
-	if (!ht)
+	ht = malloc(sizeof(hash_table_t));
+	if (ht == NULL)
 		return (NULL);
-
-	array = malloc(sizeof(*array) * size);
-	if (!array)
-	{
-		free(ht);
-		return (NULL);
-	}
-
-	for (a = 0; a < size; a++)
-		array[a] = NULL;
 
 	ht->size = size;
-	ht->array = array;
+	ht->array = malloc(sizeof(hash_node_t *) * size);
+	if (ht->array == NULL)
+		return (NULL);
+	for (i = 0; i < size; i++)
+		ht->array[i] = NULL;
 
 	return (ht);
 }
